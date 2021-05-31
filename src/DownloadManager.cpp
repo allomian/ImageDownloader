@@ -58,27 +58,6 @@ int DownloadManager::Initialize(int argc, char **argv){
 
     curl_global_cleanup();
 }
-void DownloadManager::downloadFile(std::string url,std::string fname) {
-//    std::cout
-//    << std::endl << "Downloading File from url " << url <<std::endl;
-//    CURL *curl;
-//    FILE *fp;
-//    CURLcode res;
-//
-//    curl_handle = curl_easy_init();
-//    if (curl_handle){
-//        fp = fopen(fname.c_str(), "wb");
-//        //curl_multi_add_handle()
-//        curl_easy_setopt(curl_handle, CURLOPT_URL, url.c_str());
-//        curl_easy_setopt(curl_handle, CURLOPT_WRITEFUNCTION, write_data);
-//        curl_easy_setopt(curl_handle, CURLOPT_WRITEDATA, fp);
-//        curl_easy_setopt(curl_handle, CURLOPT_NOPROGRESS, false);
-//        curl_easy_setopt(curl_handle, CURLOPT_PROGRESSFUNCTION, progress_func);
-//        res = curl_easy_perform(curl_handle);
-//        //curl_easy_cleanup(curl_handle);
-//        fclose(fp);
-//    }
-}
 int DownloadManager::progress_func(void *ptr, double TotalToDownload, double NowDownloaded, double TotalToUpload,
                                    double NowUploaded) {
     // ensure that the file to be downloaded is not empty
